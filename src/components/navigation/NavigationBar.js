@@ -11,20 +11,20 @@ function NavigationBar() {
             <>
             {[false].map((expand) => (
                 <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
-                 <Container fluid>
-                 <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-                 <Navbar.Brand as={Link} to="/">Ultimate KPOP Database</Navbar.Brand>
+                 <Container className='navigation-bar' fluid>
+                 <Navbar.Toggle className='navigation-bar' aria-controls={`offcanvasNavbar-expand-${expand}`} />
+                 <Navbar.Brand className='navigation-bar' as={Link} to="/">Ultimate KPOP Database</Navbar.Brand>
                  <Navbar.Offcanvas
                       id={`offcanvasNavbar-expand-${expand}`}
                       aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                       placement="start"
                  >
-                <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                <Offcanvas.Header className='navigation-bar' closeButton>
+                <Offcanvas.Title className='navigation-bar' id={`offcanvasNavbarLabel-expand-${expand}`}>
                     Ultimate KPOP Database
                 </Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body>
+                <Offcanvas.Body className='navigation-bar'>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                     <Nav.Link as={Link} to="/">Home</Nav.Link>
                     <Nav.Link as={Link} to="/">Groups</Nav.Link>
