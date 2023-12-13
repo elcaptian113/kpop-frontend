@@ -10,7 +10,7 @@ function NavigationBar() {
             <h1>banner placeholder</h1>
             <>
             {[false].map((expand) => (
-                <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
+                <Navbar key={expand} expand={expand} className="mb-3">
                  <Container className='navigation-bar' fluid>
                  <Navbar.Toggle className='navigation-bar' aria-controls={`offcanvasNavbar-expand-${expand}`} />
                  <Navbar.Brand className='navigation-bar' as={Link} to="/">Ultimate KPOP Database</Navbar.Brand>
@@ -27,9 +27,9 @@ function NavigationBar() {
                 <Offcanvas.Body className='navigation-bar'>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                     <Nav.Link as={Link} to="/">Home</Nav.Link>
-                    <Nav.Link as={Link} to="/">Groups</Nav.Link>
-                    <Nav.Link as={Link} to="/">Idols</Nav.Link>
-                    <Nav.Link as={Link} to="/">Videos</Nav.Link>
+                    <Nav.Link as={Link} to="/groups">Groups</Nav.Link>
+                    <Nav.Link as={Link} to="/idols">Idols</Nav.Link>
+                    <Nav.Link as={Link} to="/videos">Videos</Nav.Link>
                     <NavDropdown title="Admin" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/">Groups</NavDropdown.Item>
                         <NavDropdown.Item href="/">Idols</NavDropdown.Item>

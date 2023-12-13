@@ -3,6 +3,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import HomePage from './pages/home';
+import GroupPage from './pages/groups';
+import IdolPage from './pages/idols';
+import VideoPage from './pages/videos';
 
 import NavigationBar from './components/navigation/NavigationBar';
 
@@ -13,6 +16,9 @@ function App() {
         <NavigationBar />
         <Routes>
           <Route index element={<HomePage />} />
+          <Route path="groups" element={<GroupPage />} />
+          <Route path="idols" element={<IdolPage />} />
+          <Route path="videos" element={<VideoPage />} />
           {/*
           <Route path="add" element={<AddTools />} />
           <Route path="updatePage" element={<UpdatePage />} />
