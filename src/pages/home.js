@@ -1,6 +1,6 @@
 import './home.css';
 
-import {Container} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 
 
 
@@ -9,7 +9,18 @@ function HomePage(){
     return(
            <div className='home-index'>
                 <Container>
-                    <h1>Home Page Test</h1>
+                    <h1>Ultimate KPOP Database</h1>
+                    <br></br>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <p>Welcome to the Ultimate KPOP Database!</p>
+                            </Col>
+                            <Col>
+                            <img src="https://www.rollingstone.com/wp-content/uploads/2023/07/kpop100-list-taegeuk.jpg?w=1581&amp;h=1054&amp;crop=1"  style={{width: "1581px", width: "441px", height: "294px", margin: "0px"}} alt="The 100 Best Korean Pop Songs Of All Time" />
+                            </Col>
+                        </Row>
+                    </Container>
                </Container>
             </div>
     );  

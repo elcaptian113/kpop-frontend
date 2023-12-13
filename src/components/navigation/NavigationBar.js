@@ -1,5 +1,5 @@
 import './NavigationBar.css';
-
+import logo from './logo.JPG';
 import React from 'react';
 import {Navbar, Container, Nav, Offcanvas, NavDropdown} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
@@ -7,17 +7,18 @@ import {Link} from 'react-router-dom';
 function NavigationBar() {
     return(
         <div className='navigation-bar'>
-            <h1>banner placeholder</h1>
+            
+            <img src={logo} className="App-logo" alt="logo" />
             <>
             {[false].map((expand) => (
                 <Navbar key={expand} expand={expand} className="mb-3">
                  <Container className='navigation-bar' fluid>
-                 <Navbar.Toggle className='navigation-bar' aria-controls={`offcanvasNavbar-expand-${expand}`} />
                  <Navbar.Brand className='navigation-bar' as={Link} to="/">Ultimate KPOP Database</Navbar.Brand>
+                 <Navbar.Toggle className='navigation-bar' aria-controls={`offcanvasNavbar-expand-${expand}`} />
                  <Navbar.Offcanvas
                       id={`offcanvasNavbar-expand-${expand}`}
                       aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-                      placement="start"
+                      placement="end"
                  >
                 <Offcanvas.Header className='navigation-bar' closeButton>
                 <Offcanvas.Title className='navigation-bar' id={`offcanvasNavbarLabel-expand-${expand}`}>
