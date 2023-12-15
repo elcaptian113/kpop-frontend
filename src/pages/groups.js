@@ -1,4 +1,5 @@
 import './home.css';
+import './groups.css';
 
 import {Alert, Container, CardGroup} from 'react-bootstrap';
 import { useEffect, useState } from 'react';
@@ -29,7 +30,7 @@ function GroupPage(){
 
     if (groups.length > 0){
         return(
-           <div className='home-index'>
+           <div className='group-index'>
                 <Container>
                     <h1>KPOP Groups</h1>
                     <CardGroup>
@@ -50,7 +51,7 @@ function GroupPage(){
     }
     else if (error || groups.length === 0){
         return(
-           <div className='home-index'>
+           <div className='group-index'>
                 <Container>
                     <h1>KPOP Groups</h1>
                     <Alert variant="danger">
