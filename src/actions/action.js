@@ -9,5 +9,20 @@ const getGroups = async() => {
     
     return response;
 };
+const getIdols = async() => {
+    let response = await axios.get(url + "idols").then(response => {
+        return response.data;
+    });
+    
+    return response;
+};
+const getVideos = async() => {
+    let response = await axios.get(url + "videos").then(response => {
+        return response.data;
+    });
+    
+    return response;
+};
 
-export {getGroups};
+
+export {getGroups, getIdols, getVideos};
