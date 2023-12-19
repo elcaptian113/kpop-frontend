@@ -9,6 +9,14 @@ const getGroups = async() => {
     
     return response;
 };
+const deleteGroup = async (group) => {
+    let response = await axios.delete("http://localhost:8900/groups", {data: {id:group}}
+    ).then(response => {
+        return response.data;
+    });
+
+    return response;
+}
 const getIdols = async() => {
     let response = await axios.get(url + "idols").then(response => {
         return response.data;
@@ -25,4 +33,4 @@ const getVideos = async() => {
 };
 
 
-export {getGroups, getIdols, getVideos};
+export {getGroups, getIdols, getVideos, deleteGroup};

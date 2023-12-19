@@ -32,7 +32,7 @@ function NavigationBar() {
                     <Nav.Link as={Link} to="/idols">Idols</Nav.Link>
                     <Nav.Link as={Link} to="/videos">Videos</Nav.Link>
                     <NavDropdown title="Admin" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="/">Groups</NavDropdown.Item>
+                        <NavDropdown.Item href="/groupsAdmin">Groups</NavDropdown.Item>
                         <NavDropdown.Item href="/">Idols</NavDropdown.Item>
                         <NavDropdown.Item href="/">Videos</NavDropdown.Item>
                         <NavDropdown.Divider />

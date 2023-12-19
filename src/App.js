@@ -6,6 +6,7 @@ import HomePage from './pages/home';
 import GroupPage from './pages/groups';
 import IdolPage from './pages/idols';
 import VideoPage from './pages/videos';
+import GroupAdminPage from './pages/groupsAdmin';
 
 import NavigationBar from './components/navigation/NavigationBar';
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="groups" element={<GroupPage />} />
           <Route path="idols" element={<IdolPage />} />
           <Route path="videos" element={<VideoPage />} />
+          <Route path="groupsAdmin" element={<GroupAdminPage />} />
           {/*
           <Route path="add" element={<AddTools />} />
           <Route path="updatePage" element={<UpdatePage />} />
