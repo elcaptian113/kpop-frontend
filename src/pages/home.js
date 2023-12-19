@@ -15,7 +15,7 @@ function HomePage(){
                         <Row>
                             <Col sm={4}>
                                 <img src="https://www.rollingstone.com/wp-content/uploads/2023/07/kpop100-list-taegeuk.jpg?w=1581&amp;h=1054&amp;crop=1"  
-                                     style={{ height: "40vmin"}} 
+                                     style={{ height: "30vmin"}} 
                                      alt="The 100 Best Korean Pop Songs Of All Time" />
                             </Col>
                             <Col sm={8}>
