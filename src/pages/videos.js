@@ -44,7 +44,7 @@ function VideoPage(){
                                     artist={video.name}
                                     song_name={video.song_name}
                                     korean_name={video.korean_name}
-                                    iframe={video.iframe}
+                                    youtube_video_extention={video.youtube_video_extention}
                                 />
                             })
                         }
