@@ -8,7 +8,7 @@ function GroupCard(props) {
         return url;
     }
     return(
-        <Card key={props.id}>
+        <Card style={{flex: '200px'}} key={props.id}>
             <Card.Img variant='top' src={ transformImageToURL(props.img)}/>
             <Card.Body>
                 <Card.Title>{props.name}</Card.Title>

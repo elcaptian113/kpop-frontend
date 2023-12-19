@@ -1,10 +1,9 @@
 import './home.css';
-import './groups.css';
-
 import {Alert, Container, CardGroup} from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import { getGroups } from '../actions/action';
 import GroupCard from '../components/cards/GroupCard';
+import './groups.css';
 
 function GroupPage(){
     
@@ -36,7 +35,8 @@ function GroupPage(){
                     <CardGroup>
                         {
                             groups.map((group) => {
-                                return <GroupCard
+                                if(group.id>1)
+                                return <GroupCard 
                                     key={group.id}
                                     name={group.name}
                                     korean_name={group.korean_name}
@@ -45,7 +45,7 @@ function GroupPage(){
                             })
                         }
                     </CardGroup>
-               </Container>
+                </Container>
             </div>
       );
     }
