@@ -18,7 +18,7 @@ function VideoPage(){
                 try{
                     let data = await getVideos();
                     setVideos(data);
-                    //console.log(data)
+                    console.log(data)
                 }
                 catch (e) {
                     setError(e.message);
@@ -41,7 +41,7 @@ function VideoPage(){
                             
                                 return <VideoCard 
                                     key={video.id}
-                                    artist={video.name}
+                                    artist={video.artist}
                                     song_name={video.song_name}
                                     korean_name={video.korean_name}
                                     youtube_video_extention={video.youtube_video_extention}

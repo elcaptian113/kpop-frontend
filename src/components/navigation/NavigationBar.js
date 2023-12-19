@@ -13,7 +13,7 @@ function NavigationBar() {
             {[false].map((expand) => (
                 <Navbar key={expand} expand={expand} className="mb-3">
                  <Container className='navigation-bar' fluid>
-                 <Navbar.Brand className='navigation-bar' as={Link} to="/">Ultimate KPOP Database</Navbar.Brand>
+                 <Navbar.Brand className='navigation-bar' as={Link} to="/"></Navbar.Brand>
                  <Navbar.Toggle className='navigation-bar' aria-controls={`offcanvasNavbar-expand-${expand}`} />
                  <Navbar.Offcanvas
                       id={`offcanvasNavbar-expand-${expand}`}
