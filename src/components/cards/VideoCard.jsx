@@ -2,11 +2,6 @@ import {Card} from 'react-bootstrap';
 import './GroupCard.css';
 
 function VideoCard(props) {
-    function transformImageToURL(image){
-        let route = String.fromCharCode(...image.data);
-        let url = 'http://localhost:8900' + route;
-        return url;
-    }
     return(
         <Card style={{flex: '200px'}} key={props.id}>
             <Card.Body>
