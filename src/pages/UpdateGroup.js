@@ -26,6 +26,7 @@ function UpdateGroup() {
 
             if (response){
                 setSuccess(true)
+                //add in the reroute here
             }
         }
         catch (e){
