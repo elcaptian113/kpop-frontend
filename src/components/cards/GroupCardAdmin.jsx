@@ -26,7 +26,7 @@ function GroupCardAdmin(props) {
                 <Card.Title>ID: {props.groupId} - {props.name}</Card.Title>
                 <Card.Text>{props.korean_name}</Card.Text>
             </Card.Body>
-            <Card.Footer><Link to="/"><Button variant="warning">Update Group</Button></Link></Card.Footer>
+            <Card.Footer><Link to={"/UpdateGroup/" + props.groupId}><Button variant="warning">Update Group</Button></Link></Card.Footer>
             <Card.Footer><Button variant="danger" onClick={deleteById}>Delete Group</Button></Card.Footer>
         </Card>
     )

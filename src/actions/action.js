@@ -17,6 +17,17 @@ const deleteGroup = async (group) => {
 
     return response;
 }
+const updateGroup = async (group) => {
+    let response = await axios.put(url + "groups", group,{
+        headers: {
+            'content-type':'multipart/form-data'
+        }
+    }).then(response => {
+        return response.data;
+    });
+
+    return response;
+}
 const getIdols = async() => {
     let response = await axios.get(url + "idols").then(response => {
         return response.data;
@@ -33,4 +44,4 @@ const getVideos = async() => {
 };
 
 
-export {getGroups, getIdols, getVideos, deleteGroup};
+export {getGroups, getIdols, getVideos, deleteGroup, updateGroup};
