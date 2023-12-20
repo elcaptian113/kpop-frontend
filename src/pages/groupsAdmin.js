@@ -33,7 +33,7 @@ function GroupAdminPage(){
            <div className='groupAdmin-index'>
                 <Container>
                     <h1>KPOP Groups Admin Page</h1>
-                    <Link className="d-grid"  to="/"><Button variant="success" size="lg">Add new Group</Button></Link>
+                    <Link className="d-grid"  to="/addGroup"><Button variant="success" size="lg">Add new Group</Button></Link>
                     
                     <CardGroup>
                         {

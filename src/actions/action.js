@@ -28,6 +28,18 @@ const updateGroup = async (group) => {
 
     return response;
 }
+const addGroup = async (group) => {
+    let response = await axios.post(url + "groups", group,{
+        headers: {
+            'content-type':'multipart/form-data'
+        }
+    }).then(response => {
+        return response.data;
+    });
+
+    return response;
+}
+
 const getIdols = async() => {
     let response = await axios.get(url + "idols").then(response => {
         return response.data;
@@ -44,4 +56,4 @@ const getVideos = async() => {
 };
 
 
-export {getGroups, getIdols, getVideos, deleteGroup, updateGroup};
+export {getGroups, getIdols, getVideos, deleteGroup, updateGroup, addGroup};
