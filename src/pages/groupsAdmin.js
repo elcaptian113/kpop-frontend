@@ -17,7 +17,8 @@ function GroupAdminPage(){
                 try{
                     let data = await getGroups();
                     setGroups(data);
-                    //console.log(data)
+                    console.log(data);
+                    console.log(groups);
                 }
                 catch (e) {
                     setError(e.message);

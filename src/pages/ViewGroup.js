@@ -7,7 +7,7 @@ import './groups.css';
 
 function GroupByIdPage(){
     const {groupId} = useParams();
-    const [groups, setGroups] = useState([]);
+    let [groups, setGroups] = useState([]);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -16,9 +16,11 @@ function GroupByIdPage(){
                 try{
                     let data = await getGroupsById(groupId);
                     setGroups(data);
-                    console.log(data);
-                    console.log(groups);
-                    console.log(groupId);
+                    //console.log(data);
+                    //console.log(groups);
+                    //console.log(groupId);
+                    groups = data;
+                    //console.log(groups);
                     
                 }
                 catch (e) {
@@ -30,11 +32,12 @@ function GroupByIdPage(){
         }
     },[groups, groupId])
 
-    if (groups.length > 0){
+    if (groups){
         return(
            <div className='group-index'>
                 <Container>
-                    <h1>Test: </h1>
+                    <h1>Test:{groups.name}</h1>
+                    
                 </Container>
             </div>
       );
