@@ -38,6 +38,7 @@ function GroupPage(){
                                 if(group.id>1)
                                 return <GroupCard 
                                     key={group.id}
+                                    groupId={group.id}
                                     name={group.name}
                                     korean_name={group.korean_name}
                                     img={group.image}
