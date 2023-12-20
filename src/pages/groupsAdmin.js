@@ -45,6 +45,14 @@ function GroupAdminPage(){
                                     name={group.name}
                                     korean_name={group.korean_name}
                                     img={group.image}
+                                    sname={group.short_name}
+                                    debut={group.debut}
+                                    company={group.company}
+                                    current={group.current_members}
+                                    original={group.original_members}
+                                    fans={group.fanclub_name}
+                                    active={group.active}
+                                    gender={group.gender}
                                 />
                             })
                         }
