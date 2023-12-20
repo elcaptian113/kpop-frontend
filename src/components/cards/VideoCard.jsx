@@ -18,11 +18,7 @@ function VideoCard(props) {
                 <Card.Title>{props.artist}</Card.Title>
                 <Card.Text>{props.song_name}</Card.Text>
                 <Card.Text>{props.korean_name}</Card.Text>
-                <YouTube 
-                videoId={props.youtube_video_extention} 
-                opts={options}
-                onReady={onReady}
-                />
+                
             </Card.Body>
         </Card>
     )

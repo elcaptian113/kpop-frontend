@@ -9,6 +9,7 @@ import VideoPage from './pages/videos';
 import GroupAdminPage from './pages/groupsAdmin';
 import UpdateGroup from './pages/UpdateGroup';
 import AddGroup from './pages/AddGroup';
+import ViewGroup from './pages/ViewGroup';
 
 import NavigationBar from './components/navigation/NavigationBar';
 
@@ -26,6 +27,9 @@ function App() {
           <Route path="addGroup" element={<AddGroup />} />
           <Route path="updateGroup">
             <Route path=":groupId" element={<UpdateGroup />} />
+          </Route>
+          <Route path="viewGroup">
+            <Route path=":groupId" element={<ViewGroup />} />
           </Route>
         </Routes>
       </Router>
