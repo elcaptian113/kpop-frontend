@@ -68,13 +68,36 @@ const getIdolsByGroupId = async(group) => {
     
     return response;
 };
-const getVideos = async() => {
-    let response = await axios.get(url + "videos").then(response => {
+const deleteIdol = async (idol) => {
+    let response = await axios.delete("http://localhost:8900/idols", {data: {id:idol}}
+    ).then(response => {
         return response.data;
     });
-    
+
     return response;
-};
+}
+const updateIdol = async (idol) => {
+    let response = await axios.put(url + "idols", idol,{
+        headers: {
+            'content-type':'multipart/form-data'
+        }
+    }).then(response => {
+        return response.data;
+    });
+
+    return response;
+}
+const addIdol = async (idol) => {
+    let response = await axios.post(url + "idols", idol,{
+        headers: {
+            'content-type':'multipart/form-data'
+        }
+    }).then(response => {
+        return response.data;
+    });
+
+    return response;
+}
 
 
-export {getGroups, getIdols, getVideos, deleteGroup, updateGroup, addGroup, getGroupsById, getIdolsById, getIdolsByGroupId};
+export {getGroups, getIdols, deleteGroup, updateGroup, addGroup, getGroupsById, getIdolsById, getIdolsByGroupId, deleteIdol, addIdol, updateIdol};

@@ -30,7 +30,7 @@ function GroupCardAdmin(props) {
                 <Card.Text>Debut: {props.debut}</Card.Text>
                 <Card.Text>Company: {props.company}</Card.Text>
                 <Card.Text>Current Members: {props.current}</Card.Text>
-                <Card.Text>Original Members: {props.orginal}</Card.Text>
+                <Card.Text>Original Members: {props.original}</Card.Text>
                 <Card.Text>Fanbase: {props.fans}</Card.Text>
                 <Card.Text>Active: {props.active}</Card.Text>
                 <Card.Text>Gender: {props.gender}</Card.Text>

@@ -33,11 +33,6 @@ function NavigationBar() {
                     <NavDropdown title="Admin" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/groupsAdmin">Groups</NavDropdown.Item>
                         <NavDropdown.Item href="/">Idols</NavDropdown.Item>
-                        <NavDropdown.Item href="/">Videos</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="/">
-                         Separated link
-                        </NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 </Offcanvas.Body>
