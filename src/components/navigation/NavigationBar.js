@@ -30,7 +30,6 @@ function NavigationBar() {
                     <Nav.Link as={Link} to="/">Home</Nav.Link>
                     <Nav.Link as={Link} to="/groups">Groups</Nav.Link>
                     <Nav.Link as={Link} to="/idols">Idols</Nav.Link>
-                    <Nav.Link as={Link} to="/videos">Videos</Nav.Link>
                     <NavDropdown title="Admin" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/groupsAdmin">Groups</NavDropdown.Item>
                         <NavDropdown.Item href="/">Idols</NavDropdown.Item>

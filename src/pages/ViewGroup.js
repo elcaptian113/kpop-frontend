@@ -1,13 +1,15 @@
 import './home.css';
-import {Alert, Container, Row, Col, Table} from 'react-bootstrap';
+import {Alert, Container, Row, Col, CardGroup} from 'react-bootstrap';
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import { getGroupsById } from '../actions/action';
+import { getGroupsById, getIdolsByGroupId } from '../actions/action';
+import IdolCard from '../components/cards/IdolCard';
 import './groups.css';
 
 function GroupByIdPage(){
     const {groupId} = useParams();
     let [groups, setGroups] = useState([]);
+    let [idols, setIdols] = useState([]);
     const [error, setError] = useState(null);
 
     function transformImageToURL(image){
@@ -27,8 +29,9 @@ function GroupByIdPage(){
                     //console.log(groupId);
                     groups = data;
                     groups.image = transformImageToURL(groups.image);
-                    console.log(groups.image);
-                    
+                    //console.log(groups.image);
+                    let data1 = await getIdolsByGroupId(groupId);
+                    setIdols(data1);
                 }
                 catch (e) {
                     setError(e.message);
@@ -37,7 +40,7 @@ function GroupByIdPage(){
 
             fetchData();
         }
-    },[groups, groupId])
+    },[groups, groupId, idols])
 
     if (groups){
         return(
@@ -90,6 +93,25 @@ function GroupByIdPage(){
                                 </tbody>
                             </table>
                         </Col>
+                    </Row>
+                    <Row>
+                        <h1>Idols</h1>
+                        <CardGroup>
+                            {
+                                idols.map((idol) => {
+                                    if(idol.id != 1668)
+                                    return <IdolCard 
+                                        key={idol.id}
+                                        idolId={idol.id}
+                                        sname={idol.stage_name}
+                                        ksname={idol.korean_stage_name}
+                                        kname={idol.korean_name}
+                                        fname={idol.full_name}
+                                        img={idol.image}
+                                    />
+                                })
+                            }
+                        </CardGroup>
                     </Row>
                 </Container>
             </div>

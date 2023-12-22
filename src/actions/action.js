@@ -54,6 +54,20 @@ const getIdols = async() => {
     
     return response;
 };
+const getIdolsById = async(idol) => {
+    let response = await axios.get(url + "idols/" +  idol).then(response => {
+        return response.data;
+    });
+    
+    return response;
+};
+const getIdolsByGroupId = async(group) => {
+    let response = await axios.get(url + "idols/group/" +  group).then(response => {
+        return response.data;
+    });
+    
+    return response;
+};
 const getVideos = async() => {
     let response = await axios.get(url + "videos").then(response => {
         return response.data;
@@ -63,4 +77,4 @@ const getVideos = async() => {
 };
 
 
-export {getGroups, getIdols, getVideos, deleteGroup, updateGroup, addGroup, getGroupsById};
+export {getGroups, getIdols, getVideos, deleteGroup, updateGroup, addGroup, getGroupsById, getIdolsById, getIdolsByGroupId};
