@@ -32,7 +32,7 @@ function NavigationBar() {
                     <Nav.Link as={Link} to="/idols">Idols</Nav.Link>
                     <NavDropdown title="Admin" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/groupsAdmin">Groups</NavDropdown.Item>
-                        <NavDropdown.Item href="/">Idols</NavDropdown.Item>
+                        <NavDropdown.Item href="/idolsAdmin">Idols</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 </Offcanvas.Body>

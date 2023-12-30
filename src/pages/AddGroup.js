@@ -93,7 +93,7 @@ function AddGroup() {
                     </Form.Group>
                     <Form.Group className ='mb-4' controlId='company'>
                         <Form.Label>Company</Form.Label>
-                        <Form.Control type = "text" placeholder='E' onChange={e => setCompany(e.target.value)} />
+                        <Form.Control type = "text" placeholder='' onChange={e => setCompany(e.target.value)} />
                     </Form.Group>
                     <Form.Group className ='mb-4' controlId='currMembers'>
                         <Form.Label>Current Members</Form.Label>

@@ -35,7 +35,7 @@ function IdolPage(){
                     <CardGroup>
                         {
                             idols.map((idol) => {
-                                if(idol.id != 1668)
+                                if(idol.id !== 1668)
                                 return <IdolCard 
                                     key={idol.id}
                                     idolId={idol.id}
