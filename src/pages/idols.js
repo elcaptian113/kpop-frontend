@@ -31,7 +31,7 @@ function IdolPage(){
         return(
            <div className='idol-index'>
                 <Container>
-                    <h1>KPOP Idols</h1>
+                    <h1>Idols</h1>
                     <CardGroup>
                         {
                             idols.map((idol) => {
@@ -56,7 +56,7 @@ function IdolPage(){
         return(
            <div className='group-index'>
                 <Container>
-                    <h1>KPOP Idols</h1>
+                    <h1>Idols</h1>
                     <Alert variant="danger">
                         <Alert.Heading>An error hass Occurred</Alert.Heading>
                         <p>{(error !== null) ? error: "You currently have no groups available in your service."}</p>

@@ -31,7 +31,7 @@ function GroupPage(){
         return(
            <div className='group-index'>
                 <Container>
-                    <h1>KPOP Groups</h1>
+                    <h1>Groups</h1>
                     <CardGroup>
                         {
                             groups.map((group) => {
@@ -54,7 +54,7 @@ function GroupPage(){
         return(
            <div className='group-index'>
                 <Container>
-                    <h1>KPOP Groups</h1>
+                    <h1>Groups</h1>
                     <Alert variant="danger">
                         <Alert.Heading>An error hass Occurred</Alert.Heading>
                         <p>{(error !== null) ? error: "You currently have no groups available in your service."}</p>

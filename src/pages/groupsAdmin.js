@@ -33,7 +33,7 @@ function GroupAdminPage(){
         return(
            <div className='groupAdmin-index'>
                 <Container>
-                    <h1>KPOP Groups Admin Page</h1>
+                    <h1>Groups Admin Page</h1>
                     <Link className="d-grid"  to="/addGroup"><Button variant="success" size="lg">Add new Group</Button></Link>
                     
                     <CardGroup>
@@ -66,7 +66,7 @@ function GroupAdminPage(){
         return(
            <div className='groupAdmin-index'>
                 <Container>
-                    <h1>KPOP Groups</h1>
+                    <h1>Groups</h1>
                     <Alert variant="danger">
                         <Alert.Heading>An error hass Occurred</Alert.Heading>
                         <p>{(error !== null) ? error: "You currently have no groups available in your service."}</p>

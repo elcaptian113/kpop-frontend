@@ -33,7 +33,7 @@ function IdolsAdminPage(){
         return(
            <div className='IdolsAdmin-index'>
                 <Container>
-                    <h1>KPOP Idols Admin Page</h1>
+                    <h1>Idols Admin Page</h1>
                     <Link className="d-grid"  to="/addIdol"><Button variant="success" size="lg">Add new Idol</Button></Link>
                     
                     <CardGroup>
@@ -66,7 +66,7 @@ function IdolsAdminPage(){
         return(
            <div className='IdolAdmin-index'>
                 <Container>
-                    <h1>KPOP Idols</h1>
+                    <h1>Idols</h1>
                     <Alert variant="danger">
                         <Alert.Heading>An error hass Occurred</Alert.Heading>
                         <p>{(error !== null) ? error: "You currently have no Idols available in your service."}</p>
