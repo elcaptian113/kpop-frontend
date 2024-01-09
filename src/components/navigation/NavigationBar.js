@@ -17,6 +17,7 @@ function NavigationBar() {
     const submitData = async(group) => {
         try{
             nav('/ViewSearch/' + group.name);
+            window.location.reload(false);
             //console.log('/ViewSearch/' + group.name)
             //console.log(group.name);
         }
