@@ -1,5 +1,4 @@
 import './home.css';
-
 import {Container} from 'react-bootstrap';
 
 

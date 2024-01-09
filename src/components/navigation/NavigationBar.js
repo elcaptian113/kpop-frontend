@@ -1,8 +1,9 @@
 import './NavigationBar.css';
 import logo from './logo.JPG';
 import brandLogo from './brandLogo.jpg';
+import IconSearchHeart from '../icons/HeartSearchIcon'
 import React from 'react';
-import {Navbar, Container, Nav, NavDropdown} from 'react-bootstrap';
+import {Navbar, Container, Nav, NavDropdown, Form, Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
 function NavigationBar() {
@@ -26,6 +27,15 @@ function NavigationBar() {
                         <NavDropdown.Item href="/idolsAdmin">Idols</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
+                <Form className="d-flex">
+                    <Form.Control
+                        type="search"
+                        placeholder="Search"
+                        className="me-2"
+                        aria-label="Search"
+                    />
+                    <Button variant="light" style={{ color: 'pink'}}><IconSearchHeart /></Button>
+                </Form>
                 </Navbar.Collapse>
                 </Container>
             </Navbar>
