@@ -69,13 +69,6 @@ const getIdolsById = async(idol) => {
     
     return response;
 };
-const getIdolsByName = async(idol) => {
-    let response = await axios.get(url + "idols/name/" +  idol).then(response => {
-        return response.data;
-    });
-    
-    return response;
-};
 const getIdolsByGroupId = async(group) => {
     let response = await axios.get(url + "idols/group/" +  group).then(response => {
         return response.data;
