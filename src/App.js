@@ -13,6 +13,7 @@ import ViewGroup from './pages/ViewGroup';
 import ViewIdol from './pages/ViewIdol';
 import UpdateIdol from './pages/UpdateIdol';
 import AddIdol from './pages/AddIdol';
+import ViewSearch from './pages/ViewSearch';
 
 import NavigationBar from './components/navigation/NavigationBar';
 
@@ -40,6 +41,9 @@ function App() {
           </Route>
           <Route path="viewIdol">
             <Route path=":idolId" element={<ViewIdol />} />
+          </Route>
+          <Route path="viewSearch">
+            <Route path=":groupId" element={<ViewSearch />} />
           </Route>
         </Routes>
       </Router>

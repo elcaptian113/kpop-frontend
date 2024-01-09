@@ -108,4 +108,4 @@ const addIdol = async (idol) => {
 }
 
 
-export {getGroups, getIdols, deleteGroup, updateGroup, addGroup, getGroupsById, getIdolsById, getIdolsByGroupId, deleteIdol, addIdol, updateIdol};
+export {getGroups, getIdols, deleteGroup, updateGroup, addGroup, getGroupsById, getIdolsById, getIdolsByGroupId, deleteIdol, addIdol, updateIdol, getGroupsByName};

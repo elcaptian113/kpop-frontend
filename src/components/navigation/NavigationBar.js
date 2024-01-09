@@ -4,9 +4,44 @@ import brandLogo from './../../images/brandLogo.jpg';
 import IconSearchHeart from '../icons/HeartSearchIcon'
 import React from 'react';
 import {Navbar, Container, Nav, NavDropdown, Form, Button} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
+import { useState } from 'react';
+
 
 function NavigationBar() {
+    const [name, setName] = useState('');
+    const [error, setError] = useState(null);
+    const [success, setSuccess] = useState(false);
+    const nav = useNavigate();
+
+    const submitData = async(group) => {
+        try{
+            nav('/ViewSearch/' + group.name);
+            //console.log('/ViewSearch/' + group.name)
+            //console.log(group.name);
+        }
+        catch (e){
+            setError(e.message);
+        }  
+    }
+
+    const submitGroup= (e) => {
+        e.preventDefault();
+
+        setSuccess(false);
+        setError('');
+
+        if (name){
+            let group = {
+                name: name,
+            };
+
+            submitData(group);
+        }
+        else{
+            setError('Must contain a value!')
+        }
+    }
     return(
         <div className='navigation-bar'>
             
@@ -27,14 +62,15 @@ function NavigationBar() {
                         <NavDropdown.Item href="/idolsAdmin">Idols</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
-                <Form className="d-flex">
+                <Form className="d-flex" onSubmit={submitGroup}>
                     <Form.Control
                         type="search"
-                        placeholder="Search"
+                        placeholder="Search Groups"
                         className="me-2"
                         aria-label="Search"
+                        onChange={e => setName(e.target.value)}
                     />
-                    <Button variant="light" style={{ color: 'pink'}}><IconSearchHeart /></Button>
+                    <Button variant="light" style={{ color: 'pink'}} type='submit'><IconSearchHeart /></Button>
                 </Form>
                 </Navbar.Collapse>
                 </Container>

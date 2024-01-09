@@ -2,11 +2,11 @@ import './home.css';
 import {Alert, Container, Row, Col, CardGroup} from 'react-bootstrap';
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import { getGroupsById, getIdolsByGroupId } from '../actions/action';
+import { getGroupsByName, getIdolsByGroupId } from '../actions/action';
 import IdolCard from '../components/cards/IdolCard';
 import './groups.css';
 
-function GroupByIdPage(){
+function ViewSearchPage(){
     const {groupId} = useParams();
     let [groups, setGroups] = useState([]);
     let [idols, setIdols] = useState([]);
@@ -22,15 +22,16 @@ function GroupByIdPage(){
         if(groups.length <=0){
             const fetchData = async () => {
                 try{
-                    let data = await getGroupsById(groupId);
-                    setGroups(data);
+                    let data = await getGroupsByName(groupId);
                     //console.log(data);
-                    //console.log(groups);
+                    //console.log(groups.name);
                     //console.log(groupId);
                     groups = data;
+                    groups = groups[0];
                     groups.image = transformImageToURL(groups.image);
                     console.log(groups.image);
-                    let data1 = await getIdolsByGroupId(groupId);
+                    setGroups(groups);
+                    let data1 = await getIdolsByGroupId(groups.id);
                     setIdols(data1);
                 }
                 catch (e) {
@@ -132,4 +133,4 @@ function GroupByIdPage(){
     }
 }
 
-export default GroupByIdPage;
+export default ViewSearchPage;
