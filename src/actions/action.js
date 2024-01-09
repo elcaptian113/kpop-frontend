@@ -16,6 +16,14 @@ const getGroupsById = async(group) => {
     
     return response;
 };
+
+const getGroupsByName = async(group) => {
+    let response = await axios.get(url + "groups/name/" +  group).then(response => {
+        return response.data;
+    });
+    
+    return response;
+};
 const deleteGroup = async (group) => {
     let response = await axios.delete("http://localhost:8900/groups", {data: {id:group}}
     ).then(response => {
@@ -56,6 +64,13 @@ const getIdols = async() => {
 };
 const getIdolsById = async(idol) => {
     let response = await axios.get(url + "idols/" +  idol).then(response => {
+        return response.data;
+    });
+    
+    return response;
+};
+const getIdolsByName = async(idol) => {
+    let response = await axios.get(url + "idols/name/" +  idol).then(response => {
         return response.data;
     });
     
