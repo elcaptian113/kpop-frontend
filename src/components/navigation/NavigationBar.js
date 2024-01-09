@@ -1,6 +1,6 @@
 import './NavigationBar.css';
-import logo from './logo.JPG';
-import brandLogo from './brandLogo.jpg';
+import logo from './../../images/logo.JPG';
+import brandLogo from './../../images/brandLogo.jpg';
 import IconSearchHeart from '../icons/HeartSearchIcon'
 import React from 'react';
 import {Navbar, Container, Nav, NavDropdown, Form, Button} from 'react-bootstrap';

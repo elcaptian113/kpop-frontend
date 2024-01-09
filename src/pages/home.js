@@ -1,5 +1,6 @@
 import './home.css';
 import {Container} from 'react-bootstrap';
+import homeImage from '../images/homeImage.jpg';
 
 
 
@@ -10,7 +11,7 @@ function HomePage(){
                 <Container>
                     <h1>Ultimate KPOP Database</h1>
                     <br></br>
-                                <img src="https://www.rollingstone.com/wp-content/uploads/2023/07/kpop100-list-taegeuk.jpg?w=1581&amp;h=1054&amp;crop=1"  
+                                <img src={homeImage}  
                                      style={{ height: "50vmin"}} 
                                      alt="The 100 Best Korean Pop Songs Of All Time" />
                                 <p>Welcome to the Ultimate KPOP Database!</p>
