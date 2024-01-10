@@ -29,7 +29,7 @@ function ViewSearchPage(){
                     groups = data;
                     groups = groups[0];
                     groups.image = transformImageToURL(groups.image);
-                    console.log(groups.image);
+                    console.log(groups.name);
                     setGroups(groups);
                     let data1 = await getIdolsByGroupId(groups.id);
                     setIdols(data1);
@@ -43,7 +43,7 @@ function ViewSearchPage(){
         }
     },[groups, groupId, idols])
 
-    if (groups){
+    if (!error){
         return(
            <div className='group-index'>
                 <Container>
@@ -100,7 +100,7 @@ function ViewSearchPage(){
                         <CardGroup>
                             {
                                 idols.map((idol) => {
-                                    if(idol.id != 1668)
+                                    if(idol.id !==1668)
                                     return <IdolCard 
                                         key={idol.id}
                                         idolId={idol.id}
@@ -118,14 +118,13 @@ function ViewSearchPage(){
             </div>
       );
     }
-    else if (error || groups.length === 0){
+    else if (error || groups.name === ''){
         return(
            <div className='group-index'>
                 <Container>
-                    <h1>KPOP Groups</h1>
                     <Alert variant="danger">
                         <Alert.Heading>An error hass Occurred</Alert.Heading>
-                        <p>{(error !== null) ? error: "Group Cannot Be Found."}</p>
+                        <p>{(error !== "Request failed with status code 400") ? error: "Group Cannot Be Found."}</p>
                     </Alert>
                </Container>
             </div>
