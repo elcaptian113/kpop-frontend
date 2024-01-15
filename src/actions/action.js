@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+//set API URL
 const url = 'http://localhost:8900/';
 
+//GET all endpoint (READ records)
 const getGroups = async() => {
     let response = await axios.get(url + "groups").then(response => {
         return response.data;
@@ -9,6 +11,7 @@ const getGroups = async() => {
     
     return response;
 };
+//GET by ID enpoint
 const getGroupsById = async(group) => {
     let response = await axios.get(url + "groups/" +  group).then(response => {
         return response.data;
@@ -16,7 +19,7 @@ const getGroupsById = async(group) => {
     
     return response;
 };
-
+//GET by NAME endpoint
 const getGroupsByName = async(group) => {
     let response = await axios.get(url + "groups/name/" +  group).then(response => {
         return response.data;
@@ -24,6 +27,7 @@ const getGroupsByName = async(group) => {
     
     return response;
 };
+//DELETE endpoint - ensure parameter formatting as prop is passed as object
 const deleteGroup = async (group) => {
     let response = await axios.delete("http://localhost:8900/groups", {data: {id:group}}
     ).then(response => {
@@ -32,6 +36,7 @@ const deleteGroup = async (group) => {
 
     return response;
 }
+//PUT enpoint(UPDATE record)
 const updateGroup = async (group) => {
     let response = await axios.put(url + "groups", group,{
         headers: {
@@ -43,6 +48,7 @@ const updateGroup = async (group) => {
 
     return response;
 }
+//POST endpoint (CREATE record)
 const addGroup = async (group) => {
     let response = await axios.post(url + "groups", group,{
         headers: {
